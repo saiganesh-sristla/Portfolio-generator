@@ -23,19 +23,9 @@
         <div class="job">
           <h3><%= JOBTITLE %></h3>
           <p><%= COMPANY %> | <%= STARTDATE %> - <%= ENDDATE %></p>
-          <ul>
-            <li>
-              Developed and maintained the company’s main e-commerce website.
-            </li>
-            <li>
-              Implemented responsive design to improve user experience on mobile
-              devices.
-            </li>
-            <li>
-              Collaborated with the design team to create a new UI/UX for the
-              website.
-            </li>
-          </ul>
+          <p>
+                <%= JOBDESCRIPTION %>  
+          </p>
         </div>
       </section>
       <section>
@@ -52,7 +42,7 @@
       </section>
       <section>
         <h2>Certifications</h2>
-        <p>Certified Web Developer | Web Developer Institute | 2018</p>
+        <p><%= CERTNAME %> | <%= CERTISSUER %> | <%= CERTDATE %></p>
       </section>
     </div>
     <script src="script.js"></script>

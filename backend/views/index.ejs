@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <title>Portfolio</title>
+    
 </head>
 <body>
-  <h1>Create Your Resume</h1>
+  <h1 id="title">Create Your Resume</h1>
   <form method="post" action="" id="resume-form">
     <section>
       <h2>Contact Information</h2>
@@ -30,23 +31,13 @@
       <input type="url" id="github" name="github" placeholder="github.com/yourusername">
       <br>
     </section>
+
     <section>
-      <h2>Certifications (Optional)</h2>
-      <div id="certifications">
-        <div class="cert-entry">
-          <label for="cert_name">Certification Name:</label>
-          <input type="text" id="cert_name" name="cert_name">
-          <br>
-          <label for="cert_issuer">Issuing Institution:</label>
-          <input type="text" id="cert_issuer" name="cert_issuer">
-          <br>
-          <label for="cert_date">Year Obtained (YYYY):</label>
-          <input type="number" min="1900" max="2024" id="cert_date" name="cert_date">
-          <br>
-        </div>
-      </div>
-      <button type="button" onclick="addCertification()">Add another Certification</button>
+      <h2>Skills</h2>
+      <label for="skills">List your relevant technical and soft skills (separate by commas):</label>
+      <input type="text" id="skills" name="skills" >
     </section>
+    
     <section>
       <h2>Experience</h2>
       <div id="experience">
@@ -62,24 +53,19 @@
           <label for="end_date">End Date (Present or YYYY_MM):</label>
           <input type="month" id="end_date" name="end_date">
           <br>
-          <label for="job_description">Describe your responsibilities and achievements (bullet points):</label>
+          <label for="job_description">Describe your responsibilities and achievements:</label>
           <textarea id="job_description" name="job_description" rows="5" ></textarea>
           <br>
         </div>
       </div>
-      <button type="button" onclick="addJob()">Add another Experience</button>
     </section>
     <section>
         <h2>Summary</h2>
         <label for="summary">Write a brief summary of your skills and experience:</label>
         <textarea id="summary" name="summary" rows="5" ></textarea>
       </section>
-      <section>
-        <h2>Skills</h2>
-        <label for="skills">List your relevant technical and soft skills (separate by commas):</label>
-        <input type="text" id="skills" name="skills" >
-      </section>
-    <section>
+      
+    <section id="education">
       <h2>Education</h2>
       <label for="degree">Degree Name:</label>
       <input type="text" id="degree" name="degree" >
@@ -87,8 +73,24 @@
       <label for="university">University Name:</label>
       <input type="text" id="university" name="university" >
     </section>
+    <section>
+      <h2>Certifications (Optional)</h2>
+      <div id="certifications">
+        <div class="cert-entry">
+          <label for="cert_name">Certification Name:</label>
+          <input type="text" id="cert_name" name="cert_name">
+          <br>
+          <label for="cert_issuer">Issuing Institution:</label>
+          <input type="text" id="cert_issuer" name="cert_issuer">
+          <br>
+          <label for="cert_date">Year Obtained (YYYY):</label>
+          <input type="number" min="1900" max="2024" id="cert_date" name="cert_date">
+          <br>
+        </div>
+      </div>
+    </section>
     <button type="submit">Generate resume</button>
     <script type="module" src="index.js">  
-    </script>
+    </script>  
 </body>
 </html>

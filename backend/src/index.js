@@ -33,8 +33,13 @@ app.post('/', (req, res) => {
 
     const skills = req.body.skills;
     const skillsArray = skills.split(',');
-    console.log(skillsArray);
-    res.render('template', {NAME:name, ROLE:role, EMAIL:email, PHONE:phone, LINKEDIN:linkedin, GITHUB:github, SUMMARY:summary, JOBTITLE:job_title, COMPANY:company, STARTDATE:start_date, ENDDATE:end_date, DEGREE:degree, UNIVERSITY:university, SKILLS:skillsArray})
+    const job_description = req.body.job_description;
+    const cert_name = req.body.cert_name;
+    const cert_issuer = req.body.cert_issuer;
+    const cert_date = req.body.cert_date
+
+    
+    res.render('template', {NAME:name, ROLE:role, EMAIL:email, PHONE:phone, LINKEDIN:linkedin, GITHUB:github, SUMMARY:summary, JOBTITLE:job_title, COMPANY:company, STARTDATE:start_date, ENDDATE:end_date, DEGREE:degree, UNIVERSITY:university, SKILLS:skillsArray, JOBDESCRIPTION:job_description, CERTNAME:cert_name, CERTISSUER:cert_issuer, CERTDATE:cert_date});
 })
 
 app.listen(PORT, () => {
