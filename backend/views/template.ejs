@@ -1,54 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <div class="resume">
-        <header>
-            <h1><%= NAME %></h1>
-            <p><%= ROLE %></p>
-            <p>Email: <%= EMAIL %> | Phone: <%= PHONE %></p>
-            <p>LinkedIn: <%= LINKEDIN %> | GitHub: <%= GITHUB %></p>
-        </header>
-        <section>
-            <h2>Summary</h2>
-            <p><%= SUMMARY %></p>
-        </section>
-        <section>
-            <h2>Experience</h2>
-            <div class="job">
-                <h3><%= JOBTITLE %></h3>
-                <p><%= COMPANY %> | <%= STARTDATE %> - <%= ENDDATE %></p>
-                <ul>
-                    <li>Developed and maintained the company’s main e-commerce website.</li>
-                    <li>Implemented responsive design to improve user experience on mobile devices.</li>
-                    <li>Collaborated with the design team to create a new UI/UX for the website.</li>
-                </ul>
-            </div>
-        </section>
-        <section>
-            <h2>Education</h2>
-            <p><%= DEGREE %><br><%= UNIVERSITY %> | 2013 - 2017</p>
-        </section>
-        <section>
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>React, Angular, Vue.js</li>
-                <li>Node.js, Express, MongoDB</li>
-                <li>WordPress Development</li>
-                <li>Responsive Web Design</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Certifications</h2>
-            <p>Certified Web Developer | Web Developer Institute | 2018</p>
-        </section>
+      <header>
+        <h1><%= NAME %></h1>
+        <p><%= ROLE %></p>
+        <p>Email: <%= EMAIL %> | Phone: <%= PHONE %></p>
+        <p>LinkedIn: <%= LINKEDIN %> | GitHub: <%= GITHUB %></p>
+      </header>
+      <section>
+        <h2>Summary</h2>
+        <p><%= SUMMARY %></p>
+      </section>
+      <section>
+        <h2>Experience</h2>
+        <div class="job">
+          <h3><%= JOBTITLE %></h3>
+          <p><%= COMPANY %> | <%= STARTDATE %> - <%= ENDDATE %></p>
+          <ul>
+            <li>
+              Developed and maintained the company’s main e-commerce website.
+            </li>
+            <li>
+              Implemented responsive design to improve user experience on mobile
+              devices.
+            </li>
+            <li>
+              Collaborated with the design team to create a new UI/UX for the
+              website.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2>Education</h2>
+        <p><%= DEGREE %><br /><%= UNIVERSITY %> | 2013 - 2017</p>
+      </section>
+      <section>
+        <h2>Skills</h2>
+        <ul>
+          <% SKILLS.forEach(function(skill){ %> 
+            <li><%= skill %></li>
+          <% }); %>
+        </ul>
+      </section>
+      <section>
+        <h2>Certifications</h2>
+        <p>Certified Web Developer | Web Developer Institute | 2018</p>
+      </section>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

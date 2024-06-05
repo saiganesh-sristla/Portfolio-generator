@@ -31,8 +31,10 @@ app.post('/', (req, res) => {
     const degree = req.body.degree;
     const university = req.body.university;
 
-
-    res.render('template', {NAME:name, ROLE:role, EMAIL:email, PHONE:phone, LINKEDIN:linkedin, GITHUB:github, SUMMARY:summary, JOBTITLE:job_title, COMPANY:company, STARTDATE:start_date, ENDDATE:end_date, DEGREE:degree, UNIVERSITY:university})
+    const skills = req.body.skills;
+    const skillsArray = skills.split(',');
+    console.log(skillsArray);
+    res.render('template', {NAME:name, ROLE:role, EMAIL:email, PHONE:phone, LINKEDIN:linkedin, GITHUB:github, SUMMARY:summary, JOBTITLE:job_title, COMPANY:company, STARTDATE:start_date, ENDDATE:end_date, DEGREE:degree, UNIVERSITY:university, SKILLS:skillsArray})
 })
 
 app.listen(PORT, () => {
