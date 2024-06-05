@@ -16,7 +16,6 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
 
-    console.log(req.body)
     const name = req.body.name;
     const role = req.body.role;
     const email = req.body.email;
