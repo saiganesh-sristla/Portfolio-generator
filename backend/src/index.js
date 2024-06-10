@@ -18,7 +18,11 @@ app.get('/resume', (req, res) => {
     res.render('index')
 })
 
-app.post('/', (req, res) => {
+app.get('/templates', (req, res) => {
+    res.render('chooseTemplate')
+})
+
+app.post('/resume', (req, res) => {
 
     const name = req.body.name;
     const role = req.body.role;
